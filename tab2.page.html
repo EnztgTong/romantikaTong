@@ -1,0 +1,16 @@
+<ion-content [fullscreen]="true">
+            <div class="top" style="position: sticky;">
+                <div class="ttl">Log</div>
+            </div>
+            <div  class="shipmentBox" style="display: flex;flex-direction: column;overflow-y: scroll !important;" >
+    
+                <div class="allDown">
+                    <div class="display" *ngFor="let m of messagelist">
+                        <div >Title : {{m['title']}}</div>
+                        <div style='border:1px solid #eeeeee;padding-top: 10px;'>Messsages : {{m['msg']}} </div>
+                        <div class="date" style="margin-top: 10px;display: flex;justify-content: flex-end;align-items: center;">{{m['date'] | date : 'hh : mm a, dd/MM/yyyy'}}</div>
+                    </div>
+                </div>
+     
+            </div>
+</ion-content>
